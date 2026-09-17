@@ -1,0 +1,1060 @@
+/* =========================================================
+   PERFORMANCE PAGE
+========================================================= */
+
+.performance-page {
+  min-height: 100vh;
+  padding: 32px 40px 50px;
+  background: #f8fafc;
+  box-sizing: border-box;
+  color: #172033;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tl-page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.tl-page-kicker {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 7px;
+}
+
+.tl-page-head h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 750;
+  color: #111827;
+}
+
+.tl-page-head p {
+  margin: 9px 0 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.tl-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 42px;
+  padding: 0 16px;
+
+  border: 1px solid #d7dee8;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 650;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tl-secondary:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #b9c4d3;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
+}
+
+.tl-secondary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.tl-secondary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.performance-loading {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #64748b;
+}
+
+.performance-loading p {
+  margin: 12px 0 0;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.loading-spinner {
+  animation: performance-spin 1s linear infinite;
+}
+
+@keyframes performance-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.performance-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 16px;
+  margin-bottom: 24px;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 550;
+}
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.tl-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.performance-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.performance-stat-card {
+  min-height: 118px;
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.performance-stat-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.performance-stat-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.performance-stat-value {
+  display: block;
+
+  color: #111827;
+
+  font-size: 27px;
+  line-height: 1;
+
+  font-weight: 750;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.performance-section {
+  padding: 26px;
+  margin-bottom: 26px;
+}
+
+.performance-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.performance-section-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+.performance-section-header p {
+  margin: 7px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.performance-empty-state {
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px dashed #d7dee8;
+  border-radius: 12px;
+
+  background: #fafbfc;
+
+  color: #94a3b8;
+}
+
+.performance-empty-state svg {
+  margin-bottom: 12px;
+}
+
+.performance-empty-state h3 {
+  margin: 0;
+
+  color: #334155;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.performance-empty-state p {
+  max-width: 420px;
+
+  margin: 7px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   GOALS GRID
+========================================================= */
+
+.performance-goals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* =========================================================
+   GOAL CARD
+========================================================= */
+
+.performance-goal-card {
+  padding: 20px;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.performance-goal-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
+  transform: translateY(-1px);
+}
+
+.performance-goal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 17px;
+}
+
+.performance-goal-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.performance-status {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 27px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.status-success {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.status-warning {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.status-danger {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.status-neutral {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* =========================================================
+   GOAL TEXT
+========================================================= */
+
+.performance-goal-card h3 {
+  margin: 0 0 9px;
+
+  color: #172033;
+
+  font-size: 17px;
+  line-height: 1.45;
+
+  font-weight: 700;
+}
+
+.performance-goal-category {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 12px;
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #f1f5f9;
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.performance-goal-description {
+  margin: 0 0 16px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   GOAL TARGET
+========================================================= */
+
+.performance-goal-target {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-bottom: 18px;
+  padding: 12px 13px;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+  border: 1px solid #edf1f5;
+}
+
+.performance-goal-target span {
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.performance-goal-target strong {
+  color: #334155;
+
+  font-size: 13px;
+  line-height: 1.45;
+
+  font-weight: 650;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.performance-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.performance-progress-header span {
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.performance-progress-header strong {
+  color: #1e293b;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.performance-progress-bar {
+  width: 100%;
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #e8edf3;
+}
+
+.performance-progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #2563eb;
+
+  transition: width 0.5s ease;
+}
+
+/* =========================================================
+   DUE DATE
+========================================================= */
+
+.performance-goal-due-date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 13px;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.performance-goal-due-date svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   GOAL FOOTER
+========================================================= */
+
+.performance-goal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 18px;
+  padding-top: 16px;
+
+  border-top: 1px solid #edf1f5;
+}
+
+/* =========================================================
+   PERFORMANCE RECORDS
+========================================================= */
+
+.performance-records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.performance-record-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 17px;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.performance-record-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 5px 16px rgba(15, 23, 42, 0.05);
+}
+
+.performance-record-icon {
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.performance-record-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.performance-record-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 7px;
+}
+
+.performance-record-title-row h3 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 15px;
+  line-height: 1.4;
+
+  font-weight: 700;
+}
+
+.performance-record-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.performance-record-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.performance-record-main > p {
+  margin: 9px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.performance-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(15, 23, 42, 0.52);
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  animation: performance-overlay-in 0.18s ease;
+}
+
+@keyframes performance-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.performance-modal {
+  width: min(620px, 100%);
+
+  max-height: calc(100vh - 48px);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.18),
+    0 5px 18px rgba(15, 23, 42, 0.08);
+
+  animation: performance-modal-in 0.2s ease;
+}
+
+@keyframes performance-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.performance-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.performance-modal-kicker {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.performance-modal-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 20px;
+  line-height: 1.4;
+
+  font-weight: 750;
+}
+
+.performance-modal-close {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.performance-modal-close:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.performance-modal-body {
+  padding: 22px 24px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+/* =========================================================
+   DETAIL GROUP
+========================================================= */
+
+.performance-detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.performance-detail-group > span {
+  color: #64748b;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.performance-detail-group > strong {
+  color: #1e293b;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  font-weight: 650;
+}
+
+.performance-detail-group > p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  white-space: pre-wrap;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.performance-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 15px 24px 20px;
+
+  border-top: 1px solid #edf1f5;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.performance-modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.performance-modal-body::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.performance-modal-body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.performance-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .performance-page {
+    padding: 28px 28px 45px;
+  }
+
+  .performance-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .performance-goals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .performance-page {
+    padding: 22px 18px 35px;
+  }
+
+  .tl-page-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tl-page-head h1 {
+    font-size: 27px;
+  }
+
+  .tl-secondary {
+    width: fit-content;
+  }
+
+  .performance-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .performance-stat-card {
+    min-height: 100px;
+    padding: 18px;
+  }
+
+  .performance-section {
+    padding: 19px;
+  }
+
+  .performance-section-header h2 {
+    font-size: 19px;
+  }
+
+  .performance-goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-record-card {
+    flex-wrap: wrap;
+  }
+
+  .performance-record-main {
+    width: calc(100% - 57px);
+  }
+
+  .performance-record-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .performance-record-card > .tl-secondary {
+    margin-left: 57px;
+  }
+
+  .performance-modal-overlay {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .performance-modal {
+    max-height: calc(100vh - 30px);
+    border-radius: 13px;
+  }
+
+  .performance-modal-header {
+    padding: 19px;
+  }
+
+  .performance-modal-body {
+    padding: 19px;
+  }
+
+  .performance-modal-footer {
+    padding: 13px 19px 17px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .performance-page {
+    padding: 18px 12px 30px;
+  }
+
+  .tl-page-head h1 {
+    font-size: 24px;
+  }
+
+  .tl-page-head p {
+    font-size: 13px;
+  }
+
+  .performance-stat-card {
+    padding: 16px;
+  }
+
+  .performance-stat-icon {
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+  }
+
+  .performance-stat-value {
+    font-size: 24px;
+  }
+
+  .performance-section {
+    padding: 15px;
+  }
+
+  .performance-goal-card {
+    padding: 16px;
+  }
+
+  .performance-record-card {
+    padding: 14px;
+  }
+
+  .performance-record-icon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .performance-record-main {
+    width: calc(100% - 53px);
+  }
+
+  .performance-record-card > .tl-secondary {
+    margin-left: 53px;
+    width: calc(100% - 53px);
+  }
+
+  .performance-modal-header h2 {
+    font-size: 18px;
+  }
+}

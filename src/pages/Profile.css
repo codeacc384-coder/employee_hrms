@@ -1,0 +1,471 @@
+
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-page-wrapper {
+  padding: 32px 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.profile-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-header-text h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.profile-header-text p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+
+/* =========================================================
+   SETTINGS BUTTON
+   ========================================================= */
+
+.header-settings-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #ffffff;
+  color: #0f172a;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 10px 18px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.2s ease;
+}
+
+.header-settings-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.settings-icon {
+  color: #334155;
+}
+
+
+/* =========================================================
+   GRID LAYOUT
+   ========================================================= */
+
+.profile-grid-row {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.profile-card {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  padding: 28px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   AVATAR CARD
+   ========================================================= */
+
+.avatar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.avatar-circle {
+  width: 90px;
+  height: 90px;
+
+  background-color: #e0f2fe;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   AVATAR + BUTTON
+   ========================================================= */
+
+.avatar-badge-btn {
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   PROFILE USER
+   ========================================================= */
+
+.profile-user-name {
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #0f172a;
+
+  margin: 0 0 4px 0;
+}
+
+.profile-user-role {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #2563eb;
+
+  margin: 0 0 20px 0;
+}
+
+
+/* =========================================================
+   AVATAR META
+   ========================================================= */
+
+.avatar-meta-bar {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+
+  border-top: 1px solid #f1f5f9;
+
+  padding-top: 14px;
+
+  margin-top: 4px;
+}
+
+.meta-label {
+  display: block;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #64748b;
+
+  margin-bottom: 4px;
+}
+
+.meta-value {
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   CARD SECTION HEADER
+   ========================================================= */
+
+.card-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.card-section-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #0f172a;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   EDIT / SAVE BUTTON
+   ========================================================= */
+
+.edit-btn {
+  background: #f1f5f9;
+
+  border: none;
+
+  padding: 6px 12px;
+
+  min-width: 70px;
+  height: 32px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #2563eb;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+}
+
+.edit-btn:hover {
+  background-color: #e2e8f0;
+}
+
+
+/* =========================================================
+   INFORMATION FIELD GRID
+   ========================================================= */
+
+.info-fields-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   INFORMATION FIELD BOX
+   ========================================================= */
+
+.field-box {
+  background-color: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  padding: 12px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FIELD LABEL
+   ========================================================= */
+
+.field-label {
+  font-size: 12px;
+
+  color: #64748b;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FIELD VALUE
+   ========================================================= */
+
+.field-val {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #0f172a;
+
+  line-height: 20px;
+}
+
+
+/* =========================================================
+   EDITABLE INPUT
+   Keeps the original field box stable
+   ========================================================= */
+
+.edit-input {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  font-family: inherit;
+
+  line-height: 20px;
+
+  box-sizing: border-box;
+
+  cursor: text;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   No new border or square box
+   ========================================================= */
+
+.edit-input:focus {
+  border: none;
+  outline: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   FIELD BOX WHILE EDITING
+   Keeps the original box unchanged
+   ========================================================= */
+
+.field-box:focus-within {
+  border-color: #e2e8f0;
+
+  background-color: #f8fafc;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   DATE INPUT
+   ========================================================= */
+
+.edit-input[type="date"] {
+  color: #0f172a;
+
+  cursor: text;
+}
+
+
+/* =========================================================
+   SELECT INPUT
+   ========================================================= */
+
+select.edit-input {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .profile-page-wrapper {
+    padding: 24px;
+  }
+
+  .profile-grid-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .profile-page-wrapper {
+    padding: 20px 16px;
+  }
+
+  .profile-header-bar {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-settings-btn {
+    padding: 9px 12px;
+  }
+
+  .info-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+}

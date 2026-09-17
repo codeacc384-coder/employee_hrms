@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+.employee-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f4f7fb;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.employee-sidebar {
+  width: 260px;
+  min-width: 260px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #d9e1ec;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.employee-logo {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #d9e1ec;
+
+  color: #10213f;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.employee-nav {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-nav-link {
+  display: flex;
+  align-items: center;
+
+  min-height: 65px;
+
+  padding: 0 25px;
+
+  color: #425d7d;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  border-right: 4px solid transparent;
+
+  transition: 0.2s ease;
+}
+
+.employee-nav-link:hover {
+  background: #f2f6fc;
+  color: #2161d1;
+}
+
+.employee-nav-link.active {
+  background: #e7efff;
+  color: #10213f;
+  font-weight: 700;
+  border-right-color: #2161d1;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.employee-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .employee-sidebar {
+    width: 230px;
+    min-width: 230px;
+  }
+
+  .employee-main {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+  }
+
+  .employee-logo {
+    font-size: 23px;
+    padding: 0 20px;
+  }
+
+  .employee-nav-link {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+}

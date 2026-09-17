@@ -1,0 +1,937 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* ================================= */
+/* PAGE */
+/* ================================= */
+
+.reports-page {
+
+  min-height: 100vh;
+
+  padding: 40px;
+
+  background: #f7f9fc;
+
+  color: #172033;
+
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.reports-header {
+
+  margin-bottom: 30px;
+
+}
+
+
+.reports-labels {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+
+.reports-badge {
+
+  background: #e9efff;
+
+  color: #2854a3;
+
+  padding: 8px 16px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+
+.reports-workspace {
+
+  color: #68758a;
+
+  font-size: 14px;
+
+}
+
+
+.reports-header h1 {
+
+  margin: 18px 0 5px;
+
+  font-size: 38px;
+
+  color: #111827;
+
+}
+
+
+.reports-header p {
+
+  margin: 0;
+
+  color: #65748b;
+
+  font-size: 17px;
+
+}
+
+
+/* ================================= */
+/* CARD */
+/* ================================= */
+
+.reports-card {
+
+  background: white;
+
+  border: 1px solid #dce3ed;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  margin-bottom: 25px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(20, 40, 80, 0.05);
+
+}
+
+
+.reports-card h2 {
+
+  margin: 0 0 7px;
+
+  font-size: 24px;
+
+  color: #172033;
+
+}
+
+
+.section-description {
+
+  margin: 0 0 25px;
+
+  color: #718096;
+
+  font-size: 15px;
+
+}
+
+
+/* ================================= */
+/* FORM */
+/* ================================= */
+
+.report-form {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+}
+
+
+.report-form-group label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #52627a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+/* ================================= */
+/* ASSIGNED TASK INPUT */
+/* ================================= */
+
+.report-form-group input {
+
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d5dce6;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #172033;
+
+  font-size: 14px;
+
+  outline: none;
+
+}
+
+
+.report-form-group input:focus {
+
+  border-color: #3167df;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(49, 103, 223, 0.08);
+
+}
+
+
+/* ================================= */
+/* CURRENT DATE */
+/* ================================= */
+
+.current-date {
+
+  width: 100%;
+
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 13px;
+
+  background: #f5f7fa;
+
+  border: 1px solid #d5dce6;
+
+  border-radius: 8px;
+
+  color: #172033;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: default;
+
+}
+
+
+/* ================================= */
+/* HIDDEN FILE INPUT */
+/* ================================= */
+
+.hidden-file-input {
+
+  display: none;
+
+}
+
+
+/* ================================= */
+/* ADD REPORT BUTTON */
+/* ================================= */
+
+.add-report-button {
+
+  margin-top: 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2860df;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+
+.add-report-button:hover {
+
+  background: #1e4dbb;
+
+}
+
+
+/* ================================= */
+/* RECORD HEADER */
+/* ================================= */
+
+.records-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+
+}
+
+
+.records-header p {
+
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 15px;
+
+}
+
+
+.report-count {
+
+  background: #edf3ff;
+
+  color: #2854a3;
+
+  padding: 10px 17px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+.reports-table-container {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+}
+
+
+table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+}
+
+
+thead {
+
+  background: #f4f7fb;
+
+}
+
+
+th {
+
+  padding: 16px;
+
+  text-align: left;
+
+  color: #42526b;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+}
+
+
+td {
+
+  padding: 18px 16px;
+
+  border-bottom: 1px solid #e5eaf1;
+
+  color: #26354d;
+
+  font-size: 14px;
+
+  vertical-align: middle;
+
+}
+
+
+tbody tr:hover {
+
+  background: #fafcff;
+
+}
+
+
+/* ================================= */
+/* TASK */
+/* ================================= */
+
+.task-cell {
+
+  font-weight: 600;
+
+  color: #1e2d45;
+
+}
+
+
+/* ================================= */
+/* NO REPORTS */
+/* ================================= */
+
+.no-reports {
+
+  text-align: center;
+
+  padding: 45px;
+
+  color: #7a8799;
+
+}
+
+
+/* ================================= */
+/* DOCUMENT */
+/* ================================= */
+
+.uploaded-document {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  max-width: 230px;
+
+}
+
+
+.file-icon {
+
+  font-size: 20px;
+
+}
+
+
+.file-name {
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #3c4e67;
+
+}
+
+
+/* ================================= */
+/* ACTION */
+/* ================================= */
+
+.report-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.view-report-button,
+.download-report-button,
+.delete-report-button {
+
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 9px 13px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+
+/* VIEW */
+
+.view-report-button {
+
+  background: #eef1f5;
+
+  color: #26364d;
+
+}
+
+
+.view-report-button:hover {
+
+  background: #e0e5ec;
+
+}
+
+
+/* DOWNLOAD */
+
+.download-report-button {
+
+  background: #2860df;
+
+  color: white;
+
+}
+
+
+.download-report-button:hover {
+
+  background: #1e4dbb;
+
+}
+
+
+/* DELETE */
+
+.delete-report-button {
+
+  background: #fff0f1;
+
+  color: #d13b47;
+
+}
+
+
+.delete-report-button:hover {
+
+  background: #ffe1e4;
+
+}
+
+
+/* ================================= */
+/* MODAL OVERLAY */
+/* ================================= */
+
+.report-modal-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(15, 23, 42, 0.55);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+
+  overflow-y: auto;
+
+}
+
+
+/* ================================= */
+/* MODAL */
+/* ================================= */
+
+.report-modal {
+
+  width: 100%;
+
+  max-width: 800px;
+
+  max-height: 90vh;
+
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+/* ================================= */
+/* MODAL HEADER */
+/* ================================= */
+
+.report-modal-header {
+
+  padding: 30px;
+
+  border-bottom: 1px solid #e0e6ee;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+}
+
+
+.modal-document-icon {
+
+  display: inline-flex;
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 12px;
+
+  background: #edf4ff;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 27px;
+
+  margin-bottom: 14px;
+
+}
+
+
+.report-modal-header h2 {
+
+  margin: 0 0 6px;
+
+  font-size: 25px;
+
+  color: #172033;
+
+}
+
+
+.report-modal-header p {
+
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 14px;
+
+}
+
+
+.modal-close-button {
+
+  width: 38px;
+
+  height: 38px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #f0f2f5;
+
+  color: #334155;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+
+/* ================================= */
+/* REPORT DETAILS */
+/* ================================= */
+
+.report-details {
+
+  padding: 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+
+}
+
+
+.report-detail-box {
+
+  padding: 18px;
+
+  border: 1px solid #e0e6ed;
+
+  background: #f8fafc;
+
+  border-radius: 11px;
+
+}
+
+
+.report-detail-box span {
+
+  display: block;
+
+  color: #718096;
+
+  font-size: 13px;
+
+  margin-bottom: 7px;
+
+}
+
+
+.report-detail-box strong {
+
+  color: #172033;
+
+  font-size: 15px;
+
+}
+
+
+.uploaded-status {
+
+  color: #00875a !important;
+
+}
+
+
+/* ================================= */
+/* DOCUMENT AREA */
+/* ================================= */
+
+.document-area {
+
+  margin: 0 30px 30px;
+
+  padding: 35px;
+
+  background: #f8fafc;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+}
+
+
+.document-preview-icon {
+
+  font-size: 50px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.document-area h3 {
+
+  margin: 5px 0 8px;
+
+  color: #172033;
+
+  font-size: 19px;
+
+}
+
+
+.document-area p {
+
+  margin: 0 0 20px;
+
+  color: #718096;
+
+  font-size: 14px;
+
+}
+
+
+/* ================================= */
+/* MODAL DOWNLOAD */
+/* ================================= */
+
+.modal-download-button {
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2860df;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+
+.modal-download-button:hover {
+
+  background: #1e4dbb;
+
+}
+
+
+/* ================================= */
+/* MODAL FOOTER */
+/* ================================= */
+
+.report-modal-footer {
+
+  border-top: 1px solid #e0e6ee;
+
+  padding: 18px 30px;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+}
+
+
+.modal-close-footer-button {
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #eef1f5;
+
+  color: #334155;
+
+  padding: 11px 25px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 700px) {
+
+  .reports-page {
+
+    padding: 20px;
+
+  }
+
+
+  .report-form {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .records-header {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  }
+
+
+  .report-details {
+
+    grid-template-columns: 1fr;
+
+    padding: 20px;
+
+  }
+
+
+  .document-area {
+
+    margin: 0 20px 20px;
+
+  }
+
+
+  .report-modal-header {
+
+    padding: 20px;
+
+  }
+
+
+  .report-actions {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+}
